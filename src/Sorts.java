@@ -22,14 +22,22 @@ public class Sorts<T extends Comparable<? super T>> {
      * @param end The final index of the subsection of Arraylist we want to sort
      */
     public void InsertionSort(ArrayList<T> list, int start, int end) {
-        //
+        if (start < end) {
+            if (list.get(start).compareTo(list.get(end)) > 0) {
+                T temp = list.get(start);
+                list.set(start, list.get(end));
+                list.set(end, temp);
+
+                InsertionSort(list, start + 1, end);
+            }
+        }
     }
 
     /**
      * This method performs merge sort on the input arraylist
      *
      * @param list The arraylist we want to sort
-     * @param start The inital index on subsection of Arraylist we want to sort
+     * @param start The initial index on subsection of Arraylist we want to sort
      * @param end The final index of the subsection of Arraylist we want to sort
      */
     public void MergeSort(ArrayList<T> list, int start, int end) {
@@ -86,11 +94,14 @@ public class Sorts<T extends Comparable<? super T>> {
      * This method performs quick sort on the input arraylist
      *
      * @param list The arraylist we want to sort
-     * @param start The inital index on subsection of Arraylist we want to sort
+     * @param start The initial index on subsection of Arraylist we want to sort
      * @param end The final index of the subsection of Arraylist we want to sort
      */
     public void QuickSort(ArrayList<T> list, int start, int end) {
-        //
+        int pivot = partition(list, start, end);
+
+        QuickSort(list, start, pivot);
+        QuickSort(list, pivot, end);
     }
 
     /**
@@ -101,8 +112,29 @@ public class Sorts<T extends Comparable<? super T>> {
      * @param h right-most index we want to merge
      */
     private int partition(ArrayList<T> arr, int l, int h) {
-        //
-        return -1;
+        int mid = l + (h - l) / 2;
+        T pivot = arr.get(mid);
+
+        while (true) {
+            while (arr.get(l).compareTo(pivot) < 0) {
+                l++;
+            }
+            while (arr.get(h).compareTo(pivot) > 0) {
+                h--;
+            }
+
+            if (l >= h) {
+                break;
+            }
+
+            T temp = arr.get(l);
+            arr.set(l, arr.get(h));
+            arr.set(h, temp);
+
+            l++;
+            h++;
+        }
+        return h;
     }
 
     /**
@@ -110,7 +142,7 @@ public class Sorts<T extends Comparable<? super T>> {
      * after a certain cutoff
      *
      * @param list The arraylist we want to sort
-     * @param start The inital index on subsection of Arraylist we want to sort
+     * @param start The initial index on subsection of Arraylist we want to sort
      * @param end The final index of the subsection of Arraylist we want to sort
      * @param cutoff the minimum length of an subsection of the arraylist
      *               such that we switch to Insertion Sort
@@ -123,10 +155,38 @@ public class Sorts<T extends Comparable<? super T>> {
      * This method performs cocktail sort on the input list
      *
      * @param list The arraylist we want to sort
-     * @param start The inital index on subsection of Arraylist we want to sort
+     * @param start The initial index on subsection of Arraylist we want to sort
      * @param end The final index of the subsection of Arraylist we want to sort
      */
     public void cocktailSort(ArrayList<T> list, int start, int end){
-        //
+        boolean swap = true;
+        while (swap) {
+            swap = false;
+            for (int i = start; i < end - 1; i++) {
+                if (list.get(i).compareTo(list.get(i + 1)) > 0) {
+                    T temp = list.get(i);
+                    list.set(i, list.get(i + 1));
+                    list.set(i + 1, temp);
+                    swap = true;
+                }
+            }
+            end--;
+
+            if (!swap) {
+                break;
+            }
+
+            swap = false;
+            for (int i = end; i > start - 1; i--) {
+                if (list.get(i).compareTo(list.get(i + 1)) > 0) {
+                    T temp = list.get(i);
+                    list.set(i, list.get(i + 1));
+                    list.set(i + 1, temp);
+                    swap = true;
+                }
+            }
+            start++;
+        }
     }
+
 }

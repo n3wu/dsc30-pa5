@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3252fc0c-34a7-42b4-afdf-3cf7d08b7b2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PA5_PART 1.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SortsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PA05.iml" beforeDir="false" afterPath="$PROJECT_DIR$/PA05.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PA05/Sorts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PA05/Sorts.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PA05/SortsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PA05/SortsTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Sorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SortsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SortsTest.insertionSort">
+  <component name="RunManager" selected="JUnit.SortsTest.modified_QuickSort">
     <configuration name="SortsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA05" />
       <option name="PACKAGE_NAME" value="" />
@@ -80,11 +81,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortsTest.mergeSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SortsTest.modified_QuickSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA05" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SortsTest" />
-      <option name="METHOD_NAME" value="mergeSort" />
+      <option name="METHOD_NAME" value="modified_QuickSort" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SortsTest.insertionSort" />
-        <item itemvalue="JUnit.SortsTest.cocktailSort" />
+        <item itemvalue="JUnit.SortsTest.modified_QuickSort" />
         <item itemvalue="JUnit.SortsTest.quickSort" />
-        <item itemvalue="JUnit.SortsTest.mergeSort" />
         <item itemvalue="JUnit.SortsTest" />
+        <item itemvalue="JUnit.SortsTest.cocktailSort" />
+        <item itemvalue="JUnit.SortsTest.insertionSort" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619667998243</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="wrote all sorts except for modified quicksort, tests">
+      <created>1620072224933</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620072224933</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -142,6 +150,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="set up" />
+    <MESSAGE value="wrote all sorts except for modified quicksort, tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="wrote all sorts except for modified quicksort, tests" />
   </component>
 </project>

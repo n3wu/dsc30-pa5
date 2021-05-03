@@ -15,9 +15,9 @@ public class SortsTest {
     ArrayList<Double> doubleList;
     ArrayList<Double> doubleTest;
 
-    Sorts<String> charSorts;
-    ArrayList<String> charList;
-    ArrayList<String> charTest;
+    Sorts<Character> charSorts;
+    ArrayList<Character> charList;
+    ArrayList<Character> charTest;
 
     @Before
     public void setUp() {
@@ -55,34 +55,34 @@ public class SortsTest {
         doubleTest.add(5.4);
         doubleTest.add(10.0);
 
-        charSorts = new Sorts<String>();
+        charSorts = new Sorts<Character>();
         charList = new ArrayList<>();
-        charList.add("Y");
-        charList.add("A");
-        charList.add("Z");
-        charList.add("X");
-        charList.add("B");
-        charList.add("C");
+        charList.add('Y');
+        charList.add('A');
+        charList.add('Z');
+        charList.add('X');
+        charList.add('B');
+        charList.add('C');
         // SORTED = [A,B,C,X,Y,Z]
         charTest = new ArrayList<>();
-        charTest.add("A");
-        charTest.add("B");
-        charTest.add("C");
-        charTest.add("X");
-        charTest.add("Y");
-        charTest.add("Z");
+        charTest.add('A');
+        charTest.add('B');
+        charTest.add('C');
+        charTest.add('X');
+        charTest.add('Y');
+        charTest.add('Z');
     }
 
     @Test
     public void insertionSort() {
         intSorts.InsertionSort(intList, 0, intList.size() - 1);
-        assertSame(intTest, intList);
+        assertEquals(intTest, intList);
 
         doubleSorts.InsertionSort(doubleList, 0, doubleList.size() - 1);
-        assertSame(doubleTest, doubleList);
+        assertEquals(doubleTest, doubleList);
 
         charSorts.InsertionSort(charList, 0, charList.size() - 1);
-        assertSame(charTest, charList);
+        assertEquals(charTest, charList);
     }
 
     @Test
@@ -100,25 +100,25 @@ public class SortsTest {
     @Test
     public void quickSort() {
         intSorts.QuickSort(intList, 0, intList.size() - 1);
-        assertSame(intTest, intList);
+        assertEquals(intTest, intList);
 
         doubleSorts.QuickSort(doubleList, 0, doubleList.size() - 1);
-        assertSame(doubleTest, doubleList);
+        assertEquals(doubleTest, doubleList);
 
         charSorts.QuickSort(charList, 0, charList.size() - 1);
-        assertSame(charTest, charList);
+        assertEquals(charTest, charList);
     }
 
     @Test
     public void modified_QuickSort() {
         intSorts.InsertionSort(intList, 0, intList.size() - 1);
-        assertSame(intTest, intList);
+        assertEquals(intTest, intList);
 
         doubleSorts.InsertionSort(doubleList, 0, doubleList.size() - 1);
-        assertSame(doubleTest, doubleList);
+        assertEquals(doubleTest, doubleList);
 
         charSorts.InsertionSort(charList, 0, charList.size() - 1);
-        assertSame(charTest, charList);
+        assertEquals(charTest, charList);
     }
 
     @Test
@@ -126,8 +126,8 @@ public class SortsTest {
         intSorts.cocktailSort(intList, 0, intList.size() - 1);
         assertEquals(intTest, intList);
 
-        //doubleSorts.cocktailSort(doubleList, 0, doubleList.size() - 1);
-        //assertEquals(doubleTest, doubleList);
+        doubleSorts.cocktailSort(doubleList, 0, doubleList.size() - 1);
+        assertEquals(doubleTest, doubleList);
 
         charSorts.cocktailSort(charList, 0, charList.size() - 1);
         assertEquals(charTest, charList);

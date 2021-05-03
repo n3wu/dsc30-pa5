@@ -22,13 +22,12 @@ public class Sorts<T extends Comparable<? super T>> {
      * @param end The final index of the subsection of Arraylist we want to sort
      */
     public void InsertionSort(ArrayList<T> list, int start, int end) {
-        if (start < end) {
-            if (list.get(start).compareTo(list.get(end)) > 0) {
-                T temp = list.get(start);
-                list.set(start, list.get(end));
-                list.set(end, temp);
-
-                InsertionSort(list, start + 1, end);
+        for (int i = start; i <= end; i++) {
+            while ((i > 0) && (list.get(i).compareTo(list.get(i - 1)) < 0)) {
+                T temp = list.get(i);
+                list.set(i, list.get(i - 1));
+                list.set(i - 1, temp);
+                i--;
             }
         }
     }
@@ -98,10 +97,12 @@ public class Sorts<T extends Comparable<? super T>> {
      * @param end The final index of the subsection of Arraylist we want to sort
      */
     public void QuickSort(ArrayList<T> list, int start, int end) {
-        int pivot = partition(list, start, end);
+        if (start < end) {
+            int pivot = partition(list, start, end);
 
-        QuickSort(list, start, pivot);
-        QuickSort(list, pivot, end);
+            QuickSort(list, start, pivot);
+            QuickSort(list, pivot + 1, end);
+        }
     }
 
     /**
@@ -112,10 +113,11 @@ public class Sorts<T extends Comparable<? super T>> {
      * @param h right-most index we want to merge
      */
     private int partition(ArrayList<T> arr, int l, int h) {
-        int mid = l + (h - l) / 2;
+        int mid = l + ((h - l) / 2);
         T pivot = arr.get(mid);
 
-        while (true) {
+        boolean finished = false;
+        while (!finished) {
             while (arr.get(l).compareTo(pivot) < 0) {
                 l++;
             }
@@ -124,15 +126,15 @@ public class Sorts<T extends Comparable<? super T>> {
             }
 
             if (l >= h) {
-                break;
+                finished = true;
+            } else {
+                T temp = arr.get(l);
+                arr.set(l, arr.get(h));
+                arr.set(h, temp);
+
+                l++;
+                h--;
             }
-
-            T temp = arr.get(l);
-            arr.set(l, arr.get(h));
-            arr.set(h, temp);
-
-            l++;
-            h++;
         }
         return h;
     }
@@ -148,7 +150,15 @@ public class Sorts<T extends Comparable<? super T>> {
      *               such that we switch to Insertion Sort
      */
     public void Modified_QuickSort(ArrayList<T> list, int start, int end, int cutoff) {
-        //
+        if (start < end) {
+            int pivot = partition(list, start, end);
+
+            if ((pivot - start + 1 <= cutoff) || (end - (pivot + 1) + 1 <= cutoff)) {
+                InsertionSort(list, start, end);
+            } else {
+                QuickSort(list, start, end);
+            }
+        }
     }
 
     /**
@@ -162,7 +172,7 @@ public class Sorts<T extends Comparable<? super T>> {
         boolean swap = true;
         while (swap) {
             swap = false;
-            for (int i = start; i < end - 1; i++) {
+            for (int i = start; i <= end - 1; i++) {
                 if (list.get(i).compareTo(list.get(i + 1)) > 0) {
                     T temp = list.get(i);
                     list.set(i, list.get(i + 1));

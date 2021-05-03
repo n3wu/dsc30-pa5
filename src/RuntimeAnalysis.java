@@ -168,11 +168,121 @@ public class RuntimeAnalysis {
     public static void main(String[] args) {
         int numData;
 
+        /* 1 */
+        // Insertion Sort
+        /* numData = NUM_DATA;
+        for (int i = 0; i < NUM_TEST; i++) {
+            ArrayList<Integer> data1 = randomNumbers(numData, MIN, MAX);
+            timeInsertionSort(data1, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data2 = randomNumbers(numData, MIN, MAX * 2);
+            timeInsertionSort(data2, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data3 = randomNumbers(numData, MIN, MAX * 4);
+            timeInsertionSort(data3, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data4 = randomNumbers(numData, MIN, MAX * 8);
+            timeInsertionSort(data4, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data5 = randomNumbers(numData, MIN, MAX * 16);
+            timeInsertionSort(data5, NUM_RUN);
+            numData += numData;
+        } */
+
+        // Cocktail Sort
+        /*
         numData = NUM_DATA;
         for (int i = 0; i < NUM_TEST; i++) {
-            ArrayList<Integer> data = randomNumbers(numData, MIN, MAX);
-            timeInsertionSort(data, NUM_RUN);
+            ArrayList<Integer> data1 = randomNumbers(numData, MIN, MAX);
+            timeCocktailSort(data1, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data2 = randomNumbers(numData, MIN, MAX * 2);
+            timeCocktailSort(data2, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data3 = randomNumbers(numData, MIN, MAX * 4);
+            timeCocktailSort(data3, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data4 = randomNumbers(numData, MIN, MAX * 8);
+            timeCocktailSort(data4, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data5 = randomNumbers(numData, MIN, MAX * 16);
+            timeCocktailSort(data5, NUM_RUN);
             numData += numData;
         }
+         */
+
+        // Quicksort
+        /*
+        numData = NUM_DATA;
+        for (int i = 0; i < NUM_TEST; i++) {
+            ArrayList<Integer> data1 = randomNumbers(numData, MIN, MAX);
+            timeQuickSort(data1, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data2 = randomNumbers(numData, MIN, MAX * 2);
+            timeQuickSort(data2, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data3 = randomNumbers(numData, MIN, MAX * 4);
+            timeQuickSort(data3, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data4 = randomNumbers(numData, MIN, MAX * 8);
+            timeQuickSort(data4, NUM_RUN);
+            numData += numData;
+
+            ArrayList<Integer> data5 = randomNumbers(numData, MIN, MAX * 16);
+            timeQuickSort(data5, NUM_RUN);
+            numData += numData;
+        }
+        */
+
+        /* 2 */
+        /*
+        numData = NUM_DATA * 100;
+        for (int i = 0; i < NUM_TEST; i++) {
+            ArrayList<Integer> data = randomNumbers(numData, MIN, MAX * 100);
+
+            timeModifiedQuickSort(data, NUM_RUN, QuickSortCutoffValues[0]);
+
+            timeModifiedQuickSort(data, NUM_RUN, QuickSortCutoffValues[1]);
+
+            timeModifiedQuickSort(data, NUM_RUN, QuickSortCutoffValues[2]);
+
+            timeModifiedQuickSort(data, NUM_RUN, QuickSortCutoffValues[3]);
+
+            timeModifiedQuickSort(data, NUM_RUN, QuickSortCutoffValues[4]);
+
+            timeModifiedQuickSort(data, NUM_RUN, QuickSortCutoffValues[5]);
+
+            timeModifiedQuickSort(data, NUM_RUN, QuickSortCutoffValues[6]);
+        }
+        */
+
+        /* 3 */
+        // Traditional Quicksort
+        /*
+        int n = 2;
+        numData = NUM_DATA * n;
+        ArrayList<Integer> data1 = randomNumbers(numData, MIN, MAX * n);
+        timeQuickSort(data1, NUM_RUN);
+         */
+
+
+        // Modified Quicksort
+        /*
+        int n = 6;
+        numData = NUM_DATA * n;
+        ArrayList<Integer> data1 = randomNumbers(numData, MIN, MAX * n);
+        timeModifiedQuickSort(data1, NUM_RUN, QuickSortCutoffValues[3]);
+        */
     }
 }

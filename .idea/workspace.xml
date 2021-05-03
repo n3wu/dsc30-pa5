@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3252fc0c-34a7-42b4-afdf-3cf7d08b7b2e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PA05/Sorts.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PA05/Sorts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/PA05/SortsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PA05/SortsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sorts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sorts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SortsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SortsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/PA05/RuntimeAnalysis.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/PA05/RuntimeAnalysis.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RuntimeAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/RuntimeAnalysis.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +49,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SortsTest.modified_QuickSort">
+  <component name="RunManager" selected="Application.RuntimeAnalysis">
+    <configuration name="RuntimeAnalysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="RuntimeAnalysis" />
+      <module name="PA05" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SortsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PA05" />
       <option name="PACKAGE_NAME" value="" />
@@ -66,16 +71,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="SortsTest" />
       <option name="METHOD_NAME" value="cocktailSort" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SortsTest.insertionSort" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PA05" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SortsTest" />
-      <option name="METHOD_NAME" value="insertionSort" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -103,11 +98,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RuntimeAnalysis" />
         <item itemvalue="JUnit.SortsTest.modified_QuickSort" />
         <item itemvalue="JUnit.SortsTest.quickSort" />
         <item itemvalue="JUnit.SortsTest" />
         <item itemvalue="JUnit.SortsTest.cocktailSort" />
-        <item itemvalue="JUnit.SortsTest.insertionSort" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620072224933</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="successfully tested sorts">
+      <created>1620079448735</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620079448735</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +153,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="set up" />
     <MESSAGE value="wrote all sorts except for modified quicksort, tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrote all sorts except for modified quicksort, tests" />
+    <MESSAGE value="successfully tested sorts" />
+    <option name="LAST_COMMIT_MESSAGE" value="successfully tested sorts" />
   </component>
 </project>

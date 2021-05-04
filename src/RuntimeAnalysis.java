@@ -245,6 +245,7 @@ public class RuntimeAnalysis {
         }
         */
 
+
         /* 2 */
         /*
         numData = NUM_DATA * 100;
@@ -267,6 +268,7 @@ public class RuntimeAnalysis {
         }
         */
 
+
         /* 3 */
         // Traditional Quicksort
         /*
@@ -275,7 +277,6 @@ public class RuntimeAnalysis {
         ArrayList<Integer> data1 = randomNumbers(numData, MIN, MAX * n);
         timeQuickSort(data1, NUM_RUN);
          */
-
 
         // Modified Quicksort
         /*

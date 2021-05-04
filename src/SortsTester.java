@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
-public class SortsTest {
+public class SortsTester {
 
     Sorts<Integer> intSorts;
     ArrayList<Integer> intList;
